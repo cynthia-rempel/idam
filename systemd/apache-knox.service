@@ -16,4 +16,4 @@ TimeoutStopSec=600
 [Install]
 WantedBy=multi-user.target
 
-# Reference: 
+# Reference: https://knox.apache.org/books/knox-1-3-0/user-guide.html#Introduction
