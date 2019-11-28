@@ -1,1 +1,19 @@
-# TODO: create a knox service
+# TODO: fix this service file
+[Unit]
+Description=Apache Knox Gateway
+After=network.target
+
+[Service]
+Type=idle
+User=knox
+Group=knox
+ExecStartPre=/usr/local/bin/gateway.sh clean
+ExecStart=/usr/local/bin/gateway.sh start
+ExecStop=/usr/local/bin/gateway.sh stop
+TimeoutStartSec=600
+TimeoutStopSec=600
+
+[Install]
+WantedBy=multi-user.target
+
+# Reference: 
