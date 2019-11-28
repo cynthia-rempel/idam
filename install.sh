@@ -30,6 +30,8 @@ yum -y localinstall apacheds-2.0.0.AM25-x86_64.rpm
 # install phpldapadmin
 wget https://github.com/leenooks/phpLDAPadmin/archive/1.2.5.tar.gz
 
+# eventually take ideas from: https://www.surekhatech.com/blog/install-and-configure-phpldapadmin-web-client
+
 
 
 
