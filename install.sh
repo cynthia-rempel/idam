@@ -37,6 +37,7 @@ yum -y localinstall phpldapadmin-1.2.3-10.el7.noarch.rpm
 wget https://github.com/leenooks/phpLDAPadmin/archive/1.2.5.tar.gz
 tar -xf 1.2.5.tar.gz
 # mv 1.2.5 to webroot, and change perms 
+# change the port and ssl enable it /etc/httpd/conf.d/phpldapadmin.conf
 # eventually take ideas from: https://www.surekhatech.com/blog/install-and-configure-phpldapadmin-web-client
 
 
