@@ -28,8 +28,15 @@ wget https://apache.osuosl.org/directory/apacheds/dist/2.0.0.AM25/apacheds-2.0.0
 yum -y localinstall apacheds-2.0.0.AM25-x86_64.rpm
 
 # install phpldapadmin
-wget https://github.com/leenooks/phpLDAPadmin/archive/1.2.5.tar.gz
+# get the package installed
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-EPEL-7
+wget https://download.fedoraproject.org/pub/epel/7/x86_64/Packages/p/phpldapadmin-1.2.3-10.el7.noarch.rpm
+yum -y localinstall phpldapadmin-1.2.3-10.el7.noarch.rpm
 
+wget https://github.com/leenooks/phpLDAPadmin/archive/1.2.5.tar.gz
+tar -xf 1.2.5.tar.gz
+# mv 1.2.5 to webroot, and change perms 
 # eventually take ideas from: https://www.surekhatech.com/blog/install-and-configure-phpldapadmin-web-client
 
 
