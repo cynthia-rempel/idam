@@ -27,6 +27,10 @@ wget https://apache.osuosl.org/directory/apacheds/dist/2.0.0.AM25/apacheds-2.0.0
 # install apacheds
 yum -y localinstall apacheds-2.0.0.AM25-x86_64.rpm
 
+# install phpldapadmin
+wget https://github.com/leenooks/phpLDAPadmin/archive/1.2.5.tar.gz
+
+
 
 
 
