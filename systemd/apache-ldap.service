@@ -1,1 +1,21 @@
-# TODO: create an apacheds service file
+# # TODO: fix this service file
+[Unit]
+Description=Apache Directory Server
+After=network.target
+
+[Service]
+Type=idle
+User=apacheds
+Group=apacheds
+# bastardized from the contents of the install rpm's /etc/init.d/ for use in a systemd unit file
+ExecStart=/opt/apacheds-2.0.0.AM25/bin/apacheds start default
+ExecStop=/opt/apacheds-2.0.0.AM25/bin/apacheds stop default
+TimeoutStartSec=600
+TimeoutStopSec=600
+
+[Install]
+WantedBy=multi-user.target
+
+# Reference: 
+# starting stopping: https://directory.apache.org/apacheds/advanced-ug/5.2-start-stop.html#starting-apacheds_2
+# sample unit file: https://osc.github.io/ood-documentation/master/authentication/tutorial-oidc-keycloak-rhel7/install-keycloak.html
