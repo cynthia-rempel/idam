@@ -11,6 +11,7 @@ unzip -v || exit 0
 # download knox
 wget <insert-knox-download-url-here>.zip
 
-# extract knox
-unzip knox-{VERSION}.zip
+# extract knox, TODO: add flags to unzip so it extracts correctly
+unzip knox-{VERSION}.zip -d /usr/local
+
 
