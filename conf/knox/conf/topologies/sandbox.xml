@@ -3,4 +3,9 @@
   <url>https://KEYCLOAK_HOSTNAME:9091/</url>
   <param name="useTwoWaySsl" value="true" />
 </service>
+<service>
+  <role>keycloak</role>
+  <url>https://KEYCLOAK_HOSTNAME:9091/</url>
+  <param name="useTwoWaySsl" value="true" />
+</service>
 <!-- reference: https://risdenk.github.io/2018/03/18/apache-knox-proxying-apache-nifi.html --/>
