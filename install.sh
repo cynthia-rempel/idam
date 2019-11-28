@@ -1,17 +1,13 @@
 #!/bin/bash -x
 echo "installing apache-knox"
 
-# add test to error out if java isn't installed
-# java required for knox: https://knox.apache.org/books/knox-1-3-0/user-guide.html#Introduction
-java -version || exit 0
-
-# unzip required for installation
-unzip -v || exit 0
+# import the gpg key
+wget https://archive.cloudera.com/cdh7/7.0.3.0/redhat7/yum/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+rpm --import RPM-GPG-KEY-Jenkins
 
 # download knox
-wget <insert-knox-download-url-here>.zip
+wget https://archive.cloudera.com/cdh7/7.0.3.0/redhat7/yum/knox/knox-1.3.0.7.0.3.0-79.noarch.rpm
 
-# extract knox, TODO: add flags to unzip so it extracts correctly
-unzip knox-{VERSION}.zip -d /usr/local
+yum -y localinstall knox-1.3.0.7.0.3.0-79.noarch.rpm
 
 
