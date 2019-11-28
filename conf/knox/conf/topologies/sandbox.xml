@@ -8,5 +8,14 @@
   <url>https://PHPLDAPADMIN:9443/</url>
   <param name="useTwoWaySsl" value="true" />
 </service>
-
+<service>
+  <role>apacheds</role>
+  <url>https://APACHEDS:10389/</url>
+  <param name="useTwoWaySsl" value="true" />
+</service>
+<service>
+  <role>I forgot</role>
+  <url>https://PHPLDAPADMIN:9443/</url>
+  <param name="useTwoWaySsl" value="true" />
+</service>
 <!-- reference: https://risdenk.github.io/2018/03/18/apache-knox-proxying-apache-nifi.html --/>
