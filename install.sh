@@ -51,7 +51,8 @@ chown -R knox:knox /usr/local/knox/logs /var/log/knox
 
 # TODO: figure out what the heck this is...
 # got it from looking at /usr/local/knox/logs/gateway.log
-su knox bash -c "/usr/local/knox/bin/knoxcli.sh create-master --master mastersecret"
+# verify the install with:
+# su knox bash -c "/usr/local/knox/bin/knoxcli.sh create-master --master mastersecret"
 
 # /usr/local/knox/bin/gateway.sh start succeeded, so moving to the next thing...
 
@@ -76,7 +77,7 @@ yum -y localinstall apacheds-2.0.0.AM25-x86_64.rpm
 curl -O https://downloads.jboss.org/keycloak/8.0.0/keycloak-8.0.0.zip
 unzip keycloak-8.0.0.zip -d /usr/local
 mv /usr/local/keycloak-8.0.0 /usr/local/keycloak
-useradd keycloak
+useradd keycloak -r -d /usr/local/keycloak
 chown -R keycloak:keycloak /usr/local/keycloak
 
 # install phpldapadmin
