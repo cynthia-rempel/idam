@@ -1,9 +1,9 @@
 #!/bin/bash -x
-echo "installing apache-knox"
+echo "installing apache-knox to serve as a reverse-proxy to enable multiple servers to show up on the same port"
 
 # TODO: add logic to not install java if it's there
 # install java-1.8.0-openjdk
-yum -y install java
+yum -y install java-1.8.0-openjdk
 # kick-back and drink some coffee/tea/etc. this will take a while
 
 # install unzip
