@@ -5,6 +5,9 @@
 # knox listens on 8443
 # apacheds listens on 10389
 # apacheds listens on 10636
+# keycloak listens on 8080
+# keycloak listens on 9990
+# keycloak listens on 8443
 
 echo "installing apache-knox to serve as a reverse-proxy to enable multiple servers to show up on the same port"
 
