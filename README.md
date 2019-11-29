@@ -5,20 +5,42 @@ but I want to have fun mixing and matching
 
 ## Directory + Kerberos Servers
 
-Endless possibilities... Starting from the top
+Endless possibilities... note: this project doesn't install all of this, more of a tracker for what did (and didn't hold my attention)
 
-ApacheDS - I like this because I like Apache
+Starting from the top
+
+### ApacheDS
+
+I like this because I like Apache... I'm struggling with identifying which web-apps will be useful for configuring it...
 
 Install options:
 0. Install from RPM
 1. Install from zip
 2. Install from source (I'm curious how far I can get without building it though :)
 
-389 Directory Server - it has a nice GUI
+### 389 Directory Server
 
-OpenLDAP - it's really popular
+It has a nice GUI, and it's redhat, so that's cool...
 
-FreeIPA
+### OpenLDAP
+
+It's really popular, and very specialiazed
+
+### FreeIPA
+
+Like UCS it is the kitchen sink of everything :)
+
+## LDAP web clients
+
+PHPLDAPAdmin
+
+Web2LDAP ?
+
+DSWeb ? (389 GUI)
+
+Apache Fortress ?
+
+Directory Studio + VNC/noNVC ?
 
 ## Tabled ideas
 
