@@ -31,6 +31,10 @@ gpg --import KEYS
 gpg --verify knox-1.3.0.zip.asc
 
 unzip knox-1.3.0.zip /usr/local
+
+# clean up directory
+rm KEYS knox-1.3.0.zip knox-1.3.0.zip.asc 
+
 mv /usr/local/knox-1.3.0 /usr/local/knox
 
 # create a knox user, make it a service account (to match the rpm-based install)
