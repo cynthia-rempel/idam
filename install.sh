@@ -10,6 +10,7 @@ rpm --import RPM-GPG-KEY-Jenkins
 curl -O https://archive.cloudera.com/cdh7/7.0.3.0/redhat7/yum/knox/knox-1.3.0.7.0.3.0-79.noarch.rpm
 
 # increase the probability knox can be updated
+# and apparently handle some dependency issues
 curl -O https://archive.cloudera.com/cdh7/7.0.3.0/redhat7/yum/cdh_public.repo
 mv cdh_public.repo /etc/yum.repos.d/
 
