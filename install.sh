@@ -84,10 +84,9 @@ chown -R keycloak:keycloak /usr/local/keycloak
 
 # install phpldapadmin
 # get the package installed
-# yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-# rpm --import /etc/pki/rpm-gpg/RPM-GPG-EPEL-7
-# wget https://download.fedoraproject.org/pub/epel/7/x86_64/Packages/p/phpldapadmin-1.2.3-10.el7.noarch.rpm
-# yum -y localinstall phpldapadmin-1.2.3-10.el7.noarch.rpm
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-EPEL-7
+yum -y install phpldapadmin
 
 # wget https://github.com/leenooks/phpLDAPadmin/archive/1.2.5.tar.gz
 # tar -xf 1.2.5.tar.gz
