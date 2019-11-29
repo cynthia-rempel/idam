@@ -20,6 +20,9 @@ curl -O http://apache.cs.utah.edu/knox/1.3.0/knox-1.3.0.zip
 gpg --import KEYS
 gpg --verify knox-1.3.0.zip.asc
 
+unzip knox-1.3.0.zip /usr/local
+mv /usr/local/knox-1.3.0 /usr/local/knox
+
 echo "installing apacheds"
 
 # get and install the gpgkey
