@@ -34,11 +34,20 @@ unzip knox-1.3.0.zip /usr/local
 mv /usr/local/knox-1.3.0 /usr/local/knox
 
 # create a knox user, make it a service account (to match the rpm-based install)
-useradd -r knox
+useradd -r knox -d /usr/local/knox
+chown -R knox:knox /usr/local/knox
+
+# put the logs in the var partition, and make knox own them
+rm -rf /usr/local/knox/logs
+mkdir -p /var/log/knox
+ln -s /var/log/knox /usr/local/knox/logs
+chown -R knox:knox /usr/local/knox/logs /var/log/knox
+
+# pid's are small, so put off moving them 'til later...
 
 # TODO: figure out what the heck this is...
 # got it from looking at /usr/local/knox/logs/gateway.log
-/usr/local/knox/bin/knoxcli.sh create-master --master mastersecret
+su knox bash -c "/usr/local/knox/bin/knoxcli.sh create-master --master mastersecret"
 
 # /usr/local/knox/bin/gateway.sh start succeeded, so moving to the next thing...
 
