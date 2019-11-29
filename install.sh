@@ -3,6 +3,9 @@
 # using:
 # lsof -i
 # knox listens on 8443
+# apacheds listens on 10389
+# apacheds listens on 10636
+
 echo "installing apache-knox to serve as a reverse-proxy to enable multiple servers to show up on the same port"
 
 # TODO: add logic to not install java if it's there
