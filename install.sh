@@ -32,11 +32,14 @@ mv /usr/local/knox-1.3.0 /usr/local/knox
 echo "installing apacheds"
 
 # get and install the gpgkey
+curl -O https://www.apache.org/dist/directory/KEYS
 curl -O https://www.apache.org/dist/directory/apacheds/dist/2.0.0.AM25/apacheds-2.0.0.AM25-x86_64.rpm.asc
-rpm --import apacheds-2.0.0.AM25-x86_64.rpm.asc
 
 # download apacheds
 curl -O https://apache.osuosl.org/directory/apacheds/dist/2.0.0.AM25/apacheds-2.0.0.AM25-x86_64.rpm
+
+gpg --import KEYS
+gpg --verify apacheds-2.0.0.AM25-x86_64.rpm.asc apacheds-2.0.0.AM25-x86_64.rpm
 
 # install apacheds
 yum -y localinstall apacheds-2.0.0.AM25-x86_64.rpm
