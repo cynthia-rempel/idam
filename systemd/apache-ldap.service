@@ -8,7 +8,7 @@ Type=idle
 User=apacheds
 Group=apacheds
 # bastardized from the contents of the install rpm's /etc/init.d/ for use in a systemd unit file
-ExecStart=/usr/local/bin/apacheds start default
+ExecStart=/opt/apacheds-2.0.0.AMD25/bin/apacheds start default
 ExecStop=/usr/local/bin/apacheds stop default
 TimeoutStartSec=600
 TimeoutStopSec=600
