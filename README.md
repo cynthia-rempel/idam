@@ -47,7 +47,7 @@ PHPLDAPAdmin
 
 Web2LDAP ?
 
-DSWeb ? (389 GUI)
+DSGW https://directory.fedoraproject.org/docs/389ds/administration/dsgw.html ? (389 GUI)
 
 Apache Fortress ?
 
