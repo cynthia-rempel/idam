@@ -5,9 +5,9 @@
 # knox listens on 8443
 # apacheds listens on 10389
 # apacheds listens on 10636
-# keycloak listens on 8080
-# keycloak listens on 9990
-# keycloak listens on 8443
+# keycloak listens on 9080
+# keycloak listens on 10990
+# keycloak listens on 9443
 # apache/phpldapadmin listens on 80
 # curl -v http://127.0.0.1/phpldapadmin/index.php
 
