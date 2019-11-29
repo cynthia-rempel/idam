@@ -64,7 +64,9 @@ chown -R keycloak:keycloak /usr/local/keycloak
 # change the port and ssl enable it /etc/httpd/conf.d/phpldapadmin.conf
 # eventually take ideas from: https://www.surekhatech.com/blog/install-and-configure-phpldapadmin-web-client
 
-
-
-
+# Create a self-signed cert
+# Shamelessly lifted from: https://unix.stackexchange.com/questions/104171/create-ssl-certificate-non-interactively
+openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
+    -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=www.example.com" \
+    -keyout www.example.com.key  -out www.example.com.cert
 
