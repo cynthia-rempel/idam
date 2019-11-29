@@ -6,7 +6,7 @@ echo "installing apache-knox to serve as a reverse-proxy to enable multiple serv
 yum -y install java-1.8.0-openjdk
 # kick-back and drink some coffee/tea/etc. this will take a while
 
-# install unzip
+# install unzip, as many packages installed come as zip's
 yum -y install unzip
 
 # import the gpg key
