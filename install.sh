@@ -9,6 +9,7 @@ yum -y install java-1.8.0-openjdk
 # install unzip, as many packages installed come as zip's
 yum -y install unzip
 
+
 # import the gpg key
 curl -O https://dist.apache.org/repos/dist/release/knox/KEYS
 curl -O https://www.apache.org/dist/knox/1.3.0/knox-1.3.0.zip.asc
@@ -17,6 +18,8 @@ curl -O https://www.apache.org/dist/knox/1.3.0/knox-1.3.0.zip.asc
 curl -O http://apache.cs.utah.edu/knox/1.3.0/knox-1.3.0.zip
 # kick-back and drink some coffee/tea/etc. this will take a while
 
+# make sure the gpg is used during the run, by making sure gpg is initialized, then the shell is exited
+su `whoami` bash -c "gpg --import KEYS"
 gpg --import KEYS
 gpg --verify knox-1.3.0.zip.asc
 
