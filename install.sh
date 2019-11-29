@@ -1,6 +1,7 @@
 #!/bin/bash -x
 echo "installing apache-knox"
 
+# TODO: add logic to not install java if it's there
 # install java
 rpm --import https://archive.cloudera.com/cm6/6.3.0/redhat7/yum/RPM-GPG-KEY-cloudera
 curl -O https://archive.cloudera.com/cm6/6.3.1/redhat7/yum/cloudera-manager.repo
