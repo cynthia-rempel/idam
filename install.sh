@@ -44,15 +44,19 @@ gpg --verify apacheds-2.0.0.AM25-x86_64.rpm.asc apacheds-2.0.0.AM25-x86_64.rpm
 # install apacheds
 yum -y localinstall apacheds-2.0.0.AM25-x86_64.rpm
 
+# let's go for the gold, and see if we can get the web-ui that matches the tutorials... Apache Directory Studio
+yum -y install tigervnc-server
+# https://github.com/novnc/noVNC/wiki/advanced-usage
+
 # install phpldapadmin
 # get the package installed
-yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-rpm --import /etc/pki/rpm-gpg/RPM-GPG-EPEL-7
-wget https://download.fedoraproject.org/pub/epel/7/x86_64/Packages/p/phpldapadmin-1.2.3-10.el7.noarch.rpm
-yum -y localinstall phpldapadmin-1.2.3-10.el7.noarch.rpm
+# yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+# rpm --import /etc/pki/rpm-gpg/RPM-GPG-EPEL-7
+# wget https://download.fedoraproject.org/pub/epel/7/x86_64/Packages/p/phpldapadmin-1.2.3-10.el7.noarch.rpm
+# yum -y localinstall phpldapadmin-1.2.3-10.el7.noarch.rpm
 
-wget https://github.com/leenooks/phpLDAPadmin/archive/1.2.5.tar.gz
-tar -xf 1.2.5.tar.gz
+# wget https://github.com/leenooks/phpLDAPadmin/archive/1.2.5.tar.gz
+# tar -xf 1.2.5.tar.gz
 # mv 1.2.5 to webroot, and change perms 
 # change the port and ssl enable it /etc/httpd/conf.d/phpldapadmin.conf
 # eventually take ideas from: https://www.surekhatech.com/blog/install-and-configure-phpldapadmin-web-client
