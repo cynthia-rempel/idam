@@ -44,9 +44,12 @@ gpg --verify apacheds-2.0.0.AM25-x86_64.rpm.asc apacheds-2.0.0.AM25-x86_64.rpm
 # install apacheds
 yum -y localinstall apacheds-2.0.0.AM25-x86_64.rpm
 
-# let's go for the gold, and see if we can get the web-ui that matches the tutorials... Apache Directory Studio
-yum -y install tigervnc-server
-# https://github.com/novnc/noVNC/wiki/advanced-usage
+# install keycloak
+curl -O https://downloads.jboss.org/keycloak/8.0.0/keycloak-8.0.0.zip
+unzip keycloak-8.0.0.zip -d /usr/local
+mv /usr/local/keycloak-8.0.0 /usr/local/keycloak
+useradd keycloak
+chown -R keycloak:keycloak /usr/local/keycloak
 
 # install phpldapadmin
 # get the package installed
