@@ -33,6 +33,9 @@ gpg --verify knox-1.3.0.zip.asc
 unzip knox-1.3.0.zip /usr/local
 mv /usr/local/knox-1.3.0 /usr/local/knox
 
+# create a knox user, make it a service account (to match the rpm-based install)
+useradd -r knox
+
 # TODO: figure out what the heck this is...
 # got it from looking at /usr/local/knox/logs/gateway.log
 /usr/local/knox/bin/knoxcli.sh create-master --master mastersecret
