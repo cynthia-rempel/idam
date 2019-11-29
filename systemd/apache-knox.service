@@ -7,9 +7,9 @@ After=network.target
 Type=idle
 User=knox
 Group=knox
-ExecStartPre=/usr/local/bin/gateway.sh clean
-ExecStart=/usr/local/bin/gateway.sh start
-ExecStop=/usr/local/bin/gateway.sh stop
+ExecStartPre=/usr/lib/knox/bin/gateway.sh clean
+ExecStart=/usr/lib/knox/bin/gateway.sh start
+ExecStop=/usr/lib/knox/bin/gateway.sh stop
 TimeoutStartSec=600
 TimeoutStopSec=600
 
