@@ -23,6 +23,12 @@ gpg --verify knox-1.3.0.zip.asc
 unzip knox-1.3.0.zip /usr/local
 mv /usr/local/knox-1.3.0 /usr/local/knox
 
+# TODO: figure out what the heck this is...
+# got it from looking at /usr/local/knox/logs/gateway.log
+/usr/local/knox/bin/knoxcli.sh create-master --master mastersecret
+
+# /usr/local/knox/bin/gateway.sh start succeeded, so moving to the next thing...
+
 echo "installing apacheds"
 
 # get and install the gpgkey
