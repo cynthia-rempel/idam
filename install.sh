@@ -10,6 +10,12 @@ mv cloudera-manager.repo /etc/yum.repos.d/
 curl -O https://archive.cloudera.com/cm6/6.3.1/redhat7/yum/RPMS/x86_64/oracle-j2sdk1.8-1.8.0+update181-1.x86_64.rpm
 yum -y localinstall oracle-j2sdk1.8-1.8.0+update181-1.x86_64.rpm
 
+# add java to the PATH
+# tested with
+#   sudo su knox bash -c "java -version"
+alternatives --install /usr/bin/java /usr/java/jdk1.8.0_181-cloudera/bin/java 1000
+
+
 # import the gpg key
 curl -O https://archive.cloudera.com/cdh7/7.0.3.0/redhat7/yum/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
 rpm --import RPM-GPG-KEY-Jenkins
