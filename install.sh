@@ -6,6 +6,9 @@ echo "installing apache-knox"
 yum -y install java
 # kick-back and drink some coffee/tea/etc. this will take a while
 
+# install unzip
+yum -y install unzip
+
 # import the gpg key
 curl -O https://dist.apache.org/repos/dist/release/knox/KEYS
 curl -O https://www.apache.org/dist/knox/1.3.0/knox-1.3.0.zip.asc
