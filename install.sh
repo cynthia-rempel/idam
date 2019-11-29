@@ -2,7 +2,7 @@
 echo "installing apache-knox"
 
 # import the gpg key
-wget https://archive.cloudera.com/cdh7/7.0.3.0/redhat7/yum/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+curl -O https://archive.cloudera.com/cdh7/7.0.3.0/redhat7/yum/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
 rpm --import RPM-GPG-KEY-Jenkins
 
 # download knox
