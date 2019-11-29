@@ -17,6 +17,11 @@ mv cdh_public.repo /etc/yum.repos.d/
 # install knox
 yum -y localinstall knox-1.3.0.7.0.3.0-79.noarch.rpm
 
+# fix permissions
+# tested permissions with: 
+#   sudo su knox bash -c "/usr/lib/knox/bin/gateway.sh start 
+chown -R knox:knox /usr/lib/knox
+
 echo "installing apacheds"
 
 # get and install the gpgkey
