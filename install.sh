@@ -21,6 +21,13 @@ curl -O http://apache.cs.utah.edu/knox/1.3.0/knox-1.3.0.zip
 # make sure the gpg is used during the run, by making sure gpg is initialized, then the shell is exited
 su `whoami` bash -c "gpg --import KEYS"
 gpg --import KEYS
+# TODO: determine if it's an issue: lmccay isn't trusted with the keys file.
+# Is trusting him something that can be automated, or should it be reported to knox?
+# Currently, an interactive way is to run
+#  gpg --edit-key lmccay
+#  > trust
+#  5 
+# not even sure if that's the right trust level
 gpg --verify knox-1.3.0.zip.asc
 
 unzip knox-1.3.0.zip /usr/local
