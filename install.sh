@@ -5,6 +5,7 @@ echo "installing apache-knox"
 rpm --import https://archive.cloudera.com/cm6/6.3.0/redhat7/yum/RPM-GPG-KEY-cloudera
 curl -O https://archive.cloudera.com/cm6/6.3.1/redhat7/yum/cloudera-manager.repo
 mv cloudera-manager.repo /etc/yum.repos.d/
+yum -y install oracle-j2sdk1.8-1.8.0+update181-1.x86_64.rpm
 
 # import the gpg key
 curl -O https://archive.cloudera.com/cdh7/7.0.3.0/redhat7/yum/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
