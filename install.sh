@@ -14,7 +14,8 @@ curl -O https://www.apache.org/dist/knox/1.3.0/knox-1.3.0.zip.asc
 curl -O http://apache.cs.utah.edu/knox/1.3.0/knox-1.3.0.zip
 # kick-back and drink some coffee/tea/etc. this will take a while
 
-
+gpg --import KEYS
+gpg --verify knox-1.3.0.zip.asc
 
 echo "installing apacheds"
 
