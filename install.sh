@@ -1,6 +1,8 @@
 #!/bin/bash -x
 # TODO: deconflict the listening ports for ssl-based services
-
+# using:
+# lsof -i
+# knox listens on 8443
 echo "installing apache-knox to serve as a reverse-proxy to enable multiple servers to show up on the same port"
 
 # TODO: add logic to not install java if it's there
