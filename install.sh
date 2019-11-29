@@ -4,7 +4,7 @@ echo "installing apache-knox"
 # install java
 rpm --import https://archive.cloudera.com/cm6/6.3.0/redhat7/yum/RPM-GPG-KEY-cloudera
 curl -O https://archive.cloudera.com/cm6/6.3.1/redhat7/yum/cloudera-manager.repo
-mv cloudera-manager.repo /etc/yum/repos.d/
+mv cloudera-manager.repo /etc/yum.repos.d/
 
 # import the gpg key
 curl -O https://archive.cloudera.com/cdh7/7.0.3.0/redhat7/yum/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
