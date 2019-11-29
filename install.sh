@@ -65,6 +65,8 @@ curl -O https://www.apache.org/dist/directory/apacheds/dist/2.0.0.AM25/apacheds-
 curl -O https://apache.osuosl.org/directory/apacheds/dist/2.0.0.AM25/apacheds-2.0.0.AM25-x86_64.rpm
 
 gpg --import KEYS
+# gpg --edit-keys elecharny trust
+# select a number, then yes
 gpg --verify apacheds-2.0.0.AM25-x86_64.rpm.asc apacheds-2.0.0.AM25-x86_64.rpm
 
 # install apacheds
