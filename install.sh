@@ -8,6 +8,8 @@
 # keycloak listens on 8080
 # keycloak listens on 9990
 # keycloak listens on 8443
+# apache/phpldapadmin listens on 80
+# curl -v http://127.0.0.1/phpldapadmin/index.php
 
 echo "installing apache-knox to serve as a reverse-proxy to enable multiple servers to show up on the same port"
 
