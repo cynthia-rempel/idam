@@ -11,7 +11,7 @@ but I want to have fun mixing and matching
 
 2. Apache HTTPD
 
-3. Apache Knox (what is this new thing?)
+3. [Apache Knox](./apache-knox/README.md) Apache Knox [(what is this new thing?)](https://knox.apache.org)
 
 ## Directory + Kerberos Servers
 
