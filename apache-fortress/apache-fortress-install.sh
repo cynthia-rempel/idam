@@ -19,6 +19,12 @@ wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-rest-2.0.3
 wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-web-2.0.3.war
 wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-web-2.0.3-source-release.zip
 
+# Install fortress core
+mkdir -p /usr/local/fortress
+unzip fortress-core-2.0.3-source-release.zip 'fortress-core-2.0.3/config/*' -d /usr/local/fortress
+mv /usr/local/fortress/fortress-core-2.0.3 /usr/local/fortress/fortress-core
+mv fortress-core-2.0.3.jar /usr/local/fortress/fortress-core/
+
 # fortress realm and tomcat
 # https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md 
 # Step 5
