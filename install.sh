@@ -107,7 +107,11 @@ wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-web-2.0.3.
 # https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md 
 # Step 5
 
+# put the jars where they go
 mv fortress-realm-proxy-2.0.3.jar /usr/share/tomcat/lib/
+mv fortress-web-2.0.3.war /usr/share/tomcat/webapps/
+mv fortress-rest-2.0.3.war /usr/share/tomcat/webapps/
+
 # Step 6
 # patch /etc/tomcat/tomcat-users.xml
 # with
