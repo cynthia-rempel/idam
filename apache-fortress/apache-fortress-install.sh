@@ -1,15 +1,23 @@
 #!/bin/bash -x
 
 # install fortress
+
+# install unzip
+yum -y install unzip
+
 # install tomcat
 yum -y install tomcat
 
 # download the stuff
 wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-core-2.0.3.jar
+wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-core-2.0.3-source-release.zip
 wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-realm-impl-2.0.3.jar
+wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-realm-2.0.3-source-release.zip
 wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-realm-proxy-2.0.3.jar
 wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-rest-2.0.3.war
+wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-rest-2.0.3-source-release.zip
 wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-web-2.0.3.war
+wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-web-2.0.3-source-release.zip
 
 # fortress realm and tomcat
 # https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md 
