@@ -11,7 +11,7 @@ but I want to have fun mixing and matching
 
 2. Apache HTTPD
 
-3. [Apache Knox](./apache-knox/README.md) Apache Knox [(what is this new thing?)](https://knox.apache.org)
+3. [Apache Knox](./apache-knox/README.md) [(what is this new thing?)](https://knox.apache.org)
 
 ## Directory + Kerberos Servers
 
@@ -43,15 +43,20 @@ Like UCS it is the kitchen sink of everything :)
 
 ## LDAP web clients
 
-PHPLDAPAdmin
+### PHPLDAPAdmin
 
-Web2LDAP ?
+### Web2LDAP ?
 
-DSGW https://directory.fedoraproject.org/docs/389ds/administration/dsgw.html ? (389 GUI)
+### DSGW https://directory.fedoraproject.org/docs/389ds/administration/dsgw.html ? (389 GUI)
 
-Apache Fortress ?
+### Apache Fortress ?
 
-Directory Studio + VNC/noNVC ?
+Install guides
+
+http://xuctarine.blogspot.com/2015/10/how-to-install-apache-fortress-with.html
+
+
+### Directory Studio + VNC/noNVC ?
 
 ## Tabled ideas
 
