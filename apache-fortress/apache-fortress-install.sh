@@ -28,3 +28,5 @@ mv fortress-rest-2.0.3.war /usr/share/tomcat/webapps/
 # <role rolename="manager-gui"/>
 # <user username="tcmanager" password="m@nager123" roles="manager-script"/>
 # <user username="tcmanagergui" password="m@nager123" roles="manager-gui"/>
+
+# Verify setup by signing onto the Tomcat Manager app with credentials userId: tcmanagergui, password: m@nager123 http://localhost:8080/manager
