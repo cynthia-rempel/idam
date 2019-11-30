@@ -92,6 +92,31 @@ mv /usr/local/keycloak-8.0.0 /usr/local/keycloak
 useradd keycloak -r -d /usr/local/keycloak
 chown -R keycloak:keycloak /usr/local/keycloak
 
+# install fortress
+# install tomcat
+yum -y install tomcat
+
+# download the stuff
+wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-core-2.0.3.jar
+wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-realm-impl-2.0.3.jar
+wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-realm-proxy-2.0.3.jar
+wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-rest-2.0.3.war
+wget https://apache.osuosl.org/directory/fortress/dist/2.0.3/fortress-web-2.0.3.war
+
+# fortress realm and tomcat
+# https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md 
+# Step 5
+
+mv fortress-realm-proxy-2.0.3.jar /usr/share/tomcat/lib/
+# Step 6
+# patch /etc/tomcat/tomcat-users.xml
+# with
+# 
+# <role rolename="manager-script"/>
+# <role rolename="manager-gui"/>
+# <user username="tcmanager" password="m@nager123" roles="manager-script"/>
+# <user username="tcmanagergui" password="m@nager123" roles="manager-gui"/>
+
 # install phpldapadmin
 # get the package installed
 yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
