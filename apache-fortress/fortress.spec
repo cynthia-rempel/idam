@@ -28,10 +28,10 @@ This package contains the API documentation for %{name}.
 # %setup -q
 
 %build
-git clone %{Source0}
-git clone %{Source1}
-git clone %{Source2}
-git clone %{Source3}
+git clone https://git-wip-us.apache.org/repos/asf/directory-fortress-core.git
+git clone https://git-wip-us.apache.org/repos/asf/directory-fortress-realm.git
+git clone https://git-wip-us.apache.org/repos/asf/directory-fortress-commander.git
+git clone https://git-wip-us.apache.org/repos/asf/directory-fortress-enmasse.git
 cd directory-fortress-core/
 cp build.properties.example build.properties
 %mvn_build -s
