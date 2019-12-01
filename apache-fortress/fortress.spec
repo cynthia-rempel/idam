@@ -27,6 +27,10 @@ This package contains the API documentation for %{name}.
 
 %prep
 %setup
+%setup -a 1
+%setup -a 2
+%setup -a 3
+%setup -a 4
 
 %build
 rm -rf directory*
