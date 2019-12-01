@@ -1,10 +1,14 @@
 #!/bin/bash
 cd rpmbuild/SOURCES
-wget https://github.com/apache/directory-project/archive/44.zip
-wget http://apache.osuosl.org//directory/fortress/dist/2.0.3/fortress-core-2.0.3-source-release.zip
-wget http://apache.osuosl.org//directory/fortress/dist/2.0.3/fortress-realm-2.0.3-source-release.zip
-wget http://apache.osuosl.org//directory/fortress/dist/2.0.3/fortress-rest-2.0.3-source-release.zip
-wget http://apache.osuosl.org//directory/fortress/dist/2.0.3/fortress-web-2.0.3-source-release.zip
-wget https://github.com/apache/directory-fortress-enmasse/archive/2.0.3.zip
+wget https://github.com/apache/directory-project/archive/master.zip
+mv master.zip directory-project-master.zip
+wget https://github.com/apache/directory-fortress-core/archive/master.zip
+mv master.zip directory-fortress-core-master.zip
+wget https://github.com/apache/directory-fortress-realm/archive/master.zip
+mv master.zip directory-fortress-realm-master.zip
+wget https://github.com/apache/directory-fortress-commander/archive/master.zip
+mv master.zip directory-fortress-commander-master.zip
+wget https://github.com/apache/directory-fortress-enmasse/archive/master.zip
+mv master.zip directory-fortress-enmasse-master.zip
 cd ../..
 rpmbuild -bs fortress.spec
