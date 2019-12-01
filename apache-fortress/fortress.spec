@@ -4,10 +4,12 @@ Release:        1%{?dist}
 Summary:        Simple Maven project
 License:        BSD
 URL:            https://directory.apache.org/fortress/gen-docs/latest/apidocs/org/apache/directory/fortress/core/doc-files/ten-minute-guide.html
-Source0:        https://git-wip-us.apache.org/repos/asf/directory-fortress-core.git
-Source1:        https://git-wip-us.apache.org/repos/asf/directory-fortress-realm.git
-Source2:        https://git-wip-us.apache.org/repos/asf/directory-fortress-commander.git
-Source3:        https://git-wip-us.apache.org/repos/asf/directory-fortress-enmasse.git
+Source0:        https://github.com/apache/directory-project/archive/44.zip
+Source1:        http://apache.osuosl.org//directory/fortress/dist/2.0.3/fortress-core-2.0.3-source-release.zip
+Source2:        http://apache.osuosl.org//directory/fortress/dist/2.0.3/fortress-realm-2.0.3-source-release.zip
+Source3:        http://apache.osuosl.org//directory/fortress/dist/2.0.3/fortress-rest-2.0.3-source-release.zip
+Source4:        http://apache.osuosl.org//directory/fortress/dist/2.0.3/fortress-web-2.0.3-source-release.zip
+Source5:        https://github.com/apache/directory-fortress-enmasse/archive/2.0.3.zip
 BuildArch:      noarch
 
 BuildRequires:  maven-local
