@@ -1,8 +1,8 @@
-Name:           simplemaven
-Version:        1.0
+Name:           directory-fortress
+Version:        master
 Release:        1%{?dist}
-Summary:        Simple Maven project
-License:        BSD
+Summary:        A standards-based access management system, written in Java, supports ANSI INCITS 359 RBAC and more. 
+License:        Apache License
 URL:            https://directory.apache.org/fortress/gen-docs/latest/apidocs/org/apache/directory/fortress/core/doc-files/ten-minute-guide.html
 Source0:        directory-project-master.zip
 Source1:        directory-fortress-core-master.zip
@@ -25,14 +25,13 @@ Summary:        Javadoc for %{name}
 This package contains the API documentation for %{name}.
 
 %prep
-# %setup -q
-
+%setup -q
+%setup a 1
+%setup a 2
+%setup a 3
+%setup a 4
 %build
 rm -rf directory*
-git clone --branch master https://git-wip-us.apache.org/repos/asf/directory-fortress-core.git
-git clone --branch master https://git-wip-us.apache.org/repos/asf/directory-fortress-realm.git
-git clone --branch master https://git-wip-us.apache.org/repos/asf/directory-fortress-commander.git
-git clone --branch master https://git-wip-us.apache.org/repos/asf/directory-fortress-enmasse.git
 cd directory-fortress-core/
 cp build.properties.example build.properties
 %mvn_build -s
