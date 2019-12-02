@@ -26,12 +26,12 @@ Summary:        Javadoc for %{name}
 This package contains the API documentation for %{name}.
 
 %prep
-tar -xf %{SOURCE0}
+%setup %{SOURCE0}
 cd directory-project-master
-tar -xf %{SOURCE1}
-tar -xf %{SOURCE2}
-tar -xf %{SOURCE3}
-tar -xf %{SOURCE4}
+%setup %{SOURCE1}
+%setup %{SOURCE2}
+%setup %{SOURCE3}
+%setup %{SOURCE4}
 cd ..
 %build
 rm -rf directory*
