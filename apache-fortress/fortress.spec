@@ -26,12 +26,13 @@ Summary:        Javadoc for %{name}
 This package contains the API documentation for %{name}.
 
 %prep
-%setup
-%setup -a 1
-%setup -a 2
-%setup -a 3
-%setup -a 4
-
+tar -xf %{SOURCE0}
+cd directory-project-master
+tar -xf %{SOURCE1}
+tar -xf %{SOURCE2}
+tar -xf %{SOURCE3}
+tar -xf %{SOURCE4}
+cd ..
 %build
 rm -rf directory*
 cd directory-fortress-core/
