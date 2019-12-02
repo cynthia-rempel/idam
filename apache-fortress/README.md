@@ -13,6 +13,10 @@ What I learned so far is:
 3. mock/xmvn-builddep might generate BuildRequires
 
 [Using mock](https://blog.packagecloud.io/eng/2015/05/11/building-rpm-packages-with-mock/)
+```
+mock -r epel-7-x86_64 --init
+mock -r epel-7-x86_64 rebuild package-1.1-1.src.rpm
+```
 
 ### References:
 
