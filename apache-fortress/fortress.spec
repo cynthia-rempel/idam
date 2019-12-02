@@ -40,11 +40,11 @@ cd directory-fortress-realm-master/
 %mvn_build -s
 cd ..
 cd directory-fortress-commander-master/
-cp ../directory-fortress-core-master/config/target/fortress.properties src/main/resources
+cp ../directory-fortress-core-master/target/config/fortress.properties src/main/resources
 %mvn_build -s
 cd ..
 cd directory-fortress-enmasse-master/
-cp ../directory-fortress-core-master/config/target/fortress.properties src/main/resources
+cp ../directory-fortress-core-master/target/config/fortress.properties src/main/resources
 %mvn_build -s
 cd ..
 %install
