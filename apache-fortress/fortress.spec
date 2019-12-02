@@ -33,6 +33,7 @@ This package contains the API documentation for %{name}.
 %setup -n directory-fortress-enmasse-master -b 4
 cd ..
 %build
+cd ..
 mv directory-fortress-core-master directory-project-master/directory-fortress-core
 mv directory-fortress-realm-master directory-project-master/directory-fortress-realm
 mv directory-fortress-commander-master directory-project-master/directory-fortress-commander
