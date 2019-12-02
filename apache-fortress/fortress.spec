@@ -28,10 +28,10 @@ This package contains the API documentation for %{name}.
 %prep
 %setup %{SOURCE0}
 cd directory-project-master
-%setup %{SOURCE1}
-%setup %{SOURCE2}
-%setup %{SOURCE3}
-%setup %{SOURCE4}
+%setup -a %{SOURCE1}
+%setup -a %{SOURCE2}
+%setup -a %{SOURCE3}
+%setup -a %{SOURCE4}
 cd ..
 %build
 
