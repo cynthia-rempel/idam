@@ -26,12 +26,11 @@ Summary:        Javadoc for %{name}
 This package contains the API documentation for %{name}.
 
 %prep
-%setup %{SOURCE0}
-cd directory-project-master
-%setup -a %{SOURCE1}
-%setup -a %{SOURCE2}
-%setup -a %{SOURCE3}
-%setup -a %{SOURCE4}
+%setup -n directory-project-master -b 0
+%setup -n directory-fortress-core-master -b 1
+%setup -n directory-fortress-realm-master -b 2
+%setup -n directory-fortress-commander-master -b 3
+%setup -n directory-fortress-enmasse-master -b 4
 cd ..
 %build
 
