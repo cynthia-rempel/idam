@@ -34,23 +34,19 @@ This package contains the API documentation for %{name}.
 cd ..
 %build
 cd ..
-mv directory-fortress-core-master directory-project-master/directory-fortress-core
-mv directory-fortress-realm-master directory-project-master/directory-fortress-realm
-mv directory-fortress-commander-master directory-project-master/directory-fortress-commander
-mv directory-fortress-enmasse-master directory-project-master/directory-fortress-enmasse
-cd directory-project-master/directory-fortress-core/
+cd directory-fortress-core-master/
 cp build.properties.example build.properties
 %mvn_build -s
 cd ..
-cd directory-fortress-realm/
+cd directory-fortress-realm-master/
 %mvn_build -s
 cd ..
-cd directory-fortress-commander/
-cp ../directory-fortress-core/config/target/fortress.properties src/main/resources
+cd directory-fortress-commander-master/
+cp ../directory-fortress-core-master/config/target/fortress.properties src/main/resources
 %mvn_build -s
 cd ..
-cd directory-fortress-enmasse/
-cp ../directory-fortress-core/config/target/fortress.properties src/main/resources
+cd directory-fortress-enmasse-master/
+cp ../directory-fortress-core-master/config/target/fortress.properties src/main/resources
 %mvn_build -s
 cd ..
 %install
