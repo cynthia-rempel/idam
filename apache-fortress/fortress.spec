@@ -34,8 +34,8 @@ cd directory-project-master
 %setup %{SOURCE4}
 cd ..
 %build
-rm -rf directory*
-cd directory-fortress-core/
+
+cd directory-project-master/directory-fortress-core/
 cp build.properties.example build.properties
 %mvn_build -s
 cd ..
