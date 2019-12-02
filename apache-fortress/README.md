@@ -14,9 +14,9 @@ What I learned so far is:
 
 [Using mock to get BuildRequires](https://blog.packagecloud.io/eng/2015/05/11/building-rpm-packages-with-mock/)
 
-**Make Temporary Changes to get a build.log for xmv-builddep**
+**Create a backup .spec and make Temporary Changes to get a build.log for xmv-builddep**
 1. fortress.spec -> BuildRequires: maven
-2. fortress.spec -> %mvn_build -> mvn build
+2. fortress.spec -> %mvn_build -> mvn install
 ```
 mock -r epel-7-x86_64 --init
 mock -r epel-7-x86_64 rebuild package-1.1-1.src.rpm
