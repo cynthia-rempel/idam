@@ -4,11 +4,10 @@ Release:        1%{?dist}
 Summary:        A standards-based access management system, written in Java, supports ANSI INCITS 359 RBAC and more. 
 License:        Apache License
 URL:            https://directory.apache.org/fortress/gen-docs/latest/apidocs/org/apache/directory/fortress/core/doc-files/ten-minute-guide.html
-Source0:        directory-project-master.tar.gz
-Source1:        directory-fortress-core-master.tar.gz
-Source2:        directory-fortress-realm-master.tar.gz
-Source3:        directory-fortress-commander-master.tar.gz
-Source4:        directory-fortress-enmasse-master.tar.gz
+Source0:        directory-fortress-core-master.tar.gz
+Source1:        directory-fortress-realm-master.tar.gz
+Source2:        directory-fortress-commander-master.tar.gz
+Source3:        directory-fortress-enmasse-master.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  maven-local
@@ -26,11 +25,10 @@ Summary:        Javadoc for %{name}
 This package contains the API documentation for %{name}.
 
 %prep
-%setup -n directory-project-master -b 0
-%setup -n directory-fortress-core-master -b 1
-%setup -n directory-fortress-realm-master -b 2
-%setup -n directory-fortress-commander-master -b 3
-%setup -n directory-fortress-enmasse-master -b 4
+%setup -n directory-fortress-core-master -b 0
+%setup -n directory-fortress-realm-master -b 1
+%setup -n directory-fortress-commander-master -b 2
+%setup -n directory-fortress-enmasse-master -b 3
 cd ..
 %build
 cd ..
