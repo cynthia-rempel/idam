@@ -14,15 +14,15 @@ What I learned so far is:
 
 [Using mock to get BuildRequires](https://blog.packagecloud.io/eng/2015/05/11/building-rpm-packages-with-mock/)
 
-**Create a backup .spec and make Temporary Changes to get a build.log for xmv-builddep**
-1. fortress.spec -> BuildRequires: maven
-2. fortress.spec -> %mvn_build -> mvn install
-mvn compiler:compile -Dmaven.artifact.threads=30
+
 ```
 mock epel-7-x86_64 --init
-mock -r epel-7-x86_64 rebuild package-1.1-1.src.rpm
+# identify BuildRequires:
+mock -r epel-7-x86_64 --enable-plugin pm_request rebuild package-1.1-1.src.rpm
+xmvn-builddep
 ```
-**Be sure to change back once the log is generated**
+
 ### References:
 
 http://xuctarine.blogspot.com/2015/10/how-to-install-apache-fortress-with.html
+https://docs.fedoraproject.org/en-US/java-packaging-howto/common_errors/
