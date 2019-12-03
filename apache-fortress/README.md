@@ -19,7 +19,7 @@ What I learned so far is:
 2. fortress.spec -> %mvn_build -> mvn install
 mvn compiler:compile -Dmaven.artifact.threads=30
 ```
-mock -r epel-7-x86_64 --init
+mock epel-7-x86_64 --init
 mock -r epel-7-x86_64 rebuild package-1.1-1.src.rpm
 ```
 **Be sure to change back once the log is generated**
